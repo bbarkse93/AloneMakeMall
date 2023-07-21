@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,21 +40,14 @@
         </tr>
         </thead>
         <tbody>
+        <c:forEach var="p" items="${productList}">
         <tr>
-            <td>사과</td>
-            <td>1000</td>
-            <td>50</td>
+            <td>${p.name}</td>
+            <td>${p.price}원</td>
+            <td>${p.qty}개</td>
         </tr>
-        <tr>
-            <td>바나나</td>
-            <td>1000</td>
-            <td>50</td>
-        </tr>
-        <tr>
-            <td>체리</td>
-            <td>1000</td>
-            <td>50</td>
-        </tr>
+        </c:forEach>
+
         </tbody>
     </table>
 </div>

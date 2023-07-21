@@ -9,8 +9,8 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-public class Product {
 
+public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -18,3 +18,4 @@ public class Product {
     private Integer price;
     private Integer qty;
 }
+
